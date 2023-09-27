@@ -12,6 +12,8 @@ public class ChatBot {
     private static ArrayList<Integer> UserNumbers = new ArrayList<>();
     private static int AgeUser;
 
+    private static int UserNumber;
+
     public static void main(String[] args){
         In = new Scanner(System.in);
         System.out.println("Hello! My name is Bot.\n" +
@@ -20,6 +22,19 @@ public class ChatBot {
         System.out.println("What a great name you have, " + UserName + "!");
         GetUserNumbers();
         System.out.println("Your age is " + AgeUser + "; that`s a good time to start programming!");
+        System.out.print("Now I will prove to you that I can count to any number you want");
+        GetUserNumber();
+        ConsoleOutUserNumber();
+    }
+
+    private static void ConsoleOutUserNumber(){
+        for(int i = 0; i <= UserNumber; i++){
+            System.out.println(Integer.toString(i) + "!");
+        }
+    }
+
+    private static void GetUserNumber(){
+        UserNumber = In.nextInt();
     }
 
     private static void GetUserNumbers(){

@@ -1,4 +1,5 @@
 package ChatBot;
+import java.awt.desktop.SystemEventListener;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Dictionary;
@@ -25,6 +26,22 @@ public class ChatBot {
         System.out.print("Now I will prove to you that I can count to any number you want");
         GetUserNumber();
         ConsoleOutUserNumber();
+        TestHandle();
+        System.out.println("Goodbye " + UserName + ", have a nice day!");
+    }
+
+    private static void TestHandle(){
+        while(true){
+            System.out.println("what is the best programming language?");
+            System.out.println("1. C#");
+            System.out.println("2. Python");
+            System.out.println("3. Kotlin");
+            if(In.nextInt() == 1){
+                System.out.println("Correct!");
+                break;
+            }
+            System.out.println("Wrong!");
+        }
     }
 
     private static void ConsoleOutUserNumber(){

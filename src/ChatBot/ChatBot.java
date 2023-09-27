@@ -1,9 +1,16 @@
 package ChatBot;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Dictionary;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class ChatBot {
     private static String UserName;
     public static Scanner In;
+
+    private static ArrayList<Integer> UserNumbers = new ArrayList<>();
+    private static int AgeUser;
 
     public static void main(String[] args){
         In = new Scanner(System.in);
@@ -11,6 +18,17 @@ public class ChatBot {
                 "I was created in 2023.");
         GetUserName();
         System.out.println("What a great name you have, " + UserName + "!");
+        GetUserNumbers();
+        System.out.println("Your age is " + AgeUser + "; that`s a good time to start programming!");
+    }
+
+    private static void GetUserNumbers(){
+        System.out.println("Let me guess your age.");
+        System.out.println("Enter remainders of dividing your age by 3, 5 and 7:");
+        for(int i = 0; i < 3; i++){
+            UserNumbers.add(In.nextInt());
+        }
+        AgeUser = (UserNumbers.get(0) * 70 + UserNumbers.get(1) * 21 + UserNumbers.get(2) * 15) % 105;
     }
 
     private static void GetUserName(){
